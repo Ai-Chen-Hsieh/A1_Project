@@ -31,6 +31,15 @@ app.get('/restaurants/:id',(req,res)=>{
     res.render('show.handlebars',{restaurant:restaurant})
 })
 
+// 搜尋功能路由
+app.get('/search',(req,res) => {
+    console.log(req.query.keyword)
+    const list = restaurantLists.results;
+    const searchedrestaurant = req.query.keyword;
+    const restaurant = list.filter(restaurant => restaurant.name.toLowerCase().includes(searchedrestaurant.toLowerCase()))
+    res.render('index.handlebars',{restaurants:restaurant})
+})
+
 // 建立監聽
 app.listen(port,()=>{
     console.log(`express is running on http://localhost:${port}`)
