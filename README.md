@@ -2,7 +2,7 @@
 
 我的餐廳清單
 ## 網站畫面
-
+![餐廳首頁](https://github.com/Ai-Chen-Hsieh/A1_Project/public/A1_我的餐廳清單.PNG)
 
 
 ## 功能
